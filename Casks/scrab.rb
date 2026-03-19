@@ -1,6 +1,6 @@
 cask "scrab" do
   version "1.1.1"
-  sha256 "a2c270667fe30fb4155c8ad17780522a1b6bc69d11f4cda77728864c88dd9557"
+  sha256 "31acc11813a5973b2c9ff22c3dd2c18b271d8aef8a4c31d1481d713c60b9180b"
 
   url "https://github.com/ljdongz/Scrab/releases/download/v#{version}/Scrab-#{version}.zip"
   name "Scrab"
