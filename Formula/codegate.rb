@@ -5,24 +5,23 @@
 class Codegate < Formula
   desc "Remotely manage Claude Code sessions via Telegram"
   homepage "https://github.com/ljdongz/codegate"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
-  depends_on "bun"
   depends_on "tmux"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ljdongz/codegate/releases/download/v0.1.1/codegate_darwin_amd64.tar.gz"
-      sha256 "c4596eca55771156ff885f68eafd09a4e36cc16d029b3738cfed1a55e0f5853b"
+      url "https://github.com/ljdongz/codegate/releases/download/v0.1.2/codegate_darwin_amd64.tar.gz"
+      sha256 "892197d185b371e5099a8273a59c0950422cad8d3221261aeecded7bf616ab80"
 
       define_method(:install) do
         bin.install "codegate"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ljdongz/codegate/releases/download/v0.1.1/codegate_darwin_arm64.tar.gz"
-      sha256 "b74217372d6018db5170af88e95b612bcd1a0f143206e3cc2c153842a7e48992"
+      url "https://github.com/ljdongz/codegate/releases/download/v0.1.2/codegate_darwin_arm64.tar.gz"
+      sha256 "cc6712ac9a3bd457d53e0248a9460d43775af587582c7c00a856e73efc4fc860"
 
       define_method(:install) do
         bin.install "codegate"
@@ -32,15 +31,15 @@ class Codegate < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ljdongz/codegate/releases/download/v0.1.1/codegate_linux_amd64.tar.gz"
-      sha256 "308ff44381aa90539a1b57144f82fa6d43b90f0b63fd57af9ae8c0afc4450fe3"
+      url "https://github.com/ljdongz/codegate/releases/download/v0.1.2/codegate_linux_amd64.tar.gz"
+      sha256 "db1a7d4505d0c3cd6f9f2904f550876663707d81a78c271840f8c32475099a61"
       define_method(:install) do
         bin.install "codegate"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ljdongz/codegate/releases/download/v0.1.1/codegate_linux_arm64.tar.gz"
-      sha256 "ce0ee252cb29504264025222100e8dc6e2680a4a1041be9b4d8cb1f843f0d26e"
+      url "https://github.com/ljdongz/codegate/releases/download/v0.1.2/codegate_linux_arm64.tar.gz"
+      sha256 "c6718db3fc6c92ba33c2bc8acb1a9f6f5d098b0b13b8a6901c0f6ef54cff4277"
       define_method(:install) do
         bin.install "codegate"
       end
