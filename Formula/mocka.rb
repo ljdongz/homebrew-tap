@@ -2,7 +2,7 @@ class Mocka < Formula
   desc "Web-based HTTP & WebSocket mock server"
   homepage "https://github.com/ljdongz/Mocka"
   url "https://github.com/ljdongz/Mocka/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "6d90afcd4a2fd5ef53bfa4892b5d65fae4581511de4790a2436c66fc7071061b"
+  sha256 "e89d86932fa0d25741f3dda697292951c3888793c96e65834dacb0ccf6106279"
   license "MIT"
 
   depends_on "node@22"
@@ -24,7 +24,7 @@ class Mocka < Formula
   end
 
   service do
-    run [opt_bin/"mocka"]
+    run [opt_bin/"mocka", "start"]
     keep_alive true
     log_path var/"log/mocka/output.log"
     error_log_path var/"log/mocka/error.log"
