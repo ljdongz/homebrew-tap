@@ -19,28 +19,28 @@ class Mocka < Formula
 
     (bin/"mocka").write_env_script(
       libexec/"server/dist/cli.js",
-      PATH: "#{Formula["node@22"].opt_bin}:$PATH",
-      MOCKA_DATA_DIR: var/"lib/mocka"
+      PATH: "#{Formula["node@22"].opt_bin}:$PATH"
     )
   end
 
   service do
     run [opt_bin/"mocka"]
     keep_alive true
-    working_dir var/"lib/mocka"
     log_path var/"log/mocka/output.log"
     error_log_path var/"log/mocka/error.log"
-    environment_variables MOCKA_DATA_DIR: var/"lib/mocka"
   end
 
   def post_install
-    (var/"lib/mocka").mkpath
     (var/"log/mocka").mkpath
   end
 
   def caveats
     <<~EOS
-      Data is stored in #{var}/lib/mocka/ and persists across upgrades.
+      Data is stored in ~/Library/Application Support/Mocka/
+      and persists across upgrades and uninstalls.
+
+      To remove data completely:
+        brew uninstall --zap mocka
 
       Start Mocka:
         mocka start
@@ -61,6 +61,8 @@ class Mocka < Formula
         brew services start mocka
     EOS
   end
+
+  zap trash: "~/Library/Application Support/Mocka"
 
   test do
     assert_match "Usage: mocka", shell_output("#{bin}/mocka help 2>&1", 1)
