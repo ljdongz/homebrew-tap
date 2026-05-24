@@ -40,7 +40,7 @@ class Mocka < Formula
       and persists across upgrades and uninstalls.
 
       To remove data completely:
-        brew uninstall --zap mocka
+        rm -rf ~/Library/Application\\ Support/Mocka
 
       Start Mocka:
         mocka start
@@ -61,8 +61,6 @@ class Mocka < Formula
         brew services start mocka
     EOS
   end
-
-  zap trash: "~/Library/Application Support/Mocka"
 
   test do
     assert_match "Usage: mocka", shell_output("#{bin}/mocka help 2>&1", 1)
