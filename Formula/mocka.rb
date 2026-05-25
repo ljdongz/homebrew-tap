@@ -1,8 +1,8 @@
 class Mocka < Formula
-  desc "Web-based HTTP & WebSocket mock server"
+  desc "AI-powered local mock server with MCP support"
   homepage "https://github.com/ljdongz/Mocka"
-  url "https://github.com/ljdongz/Mocka/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "e89d86932fa0d25741f3dda697292951c3888793c96e65834dacb0ccf6106279"
+  url "https://github.com/ljdongz/Mocka/archive/refs/tags/v2.0.0.tar.gz"
+  sha256 "7361ee59b7dd7b1b795617d4017c4faa81d123c359a05d2c5adec0715439176a"
   license "MIT"
 
   depends_on "node@22"
@@ -56,6 +56,9 @@ class Mocka < Formula
 
       Custom ports:
         ADMIN_PORT=4000 MOCK_PORT=9090 mocka start
+
+      MCP (AI agent integration):
+        mocka mcp install
 
       Optional — auto-start on login via launchd:
         brew services start mocka
