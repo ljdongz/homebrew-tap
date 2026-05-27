@@ -1,8 +1,8 @@
 class Mocka < Formula
   desc "AI-powered local mock server with MCP support"
   homepage "https://github.com/ljdongz/Mocka"
-  url "https://github.com/ljdongz/Mocka/archive/refs/tags/v2.0.0.tar.gz"
-  sha256 "7361ee59b7dd7b1b795617d4017c4faa81d123c359a05d2c5adec0715439176a"
+  url "https://github.com/ljdongz/Mocka/archive/refs/tags/v3.0.0.tar.gz"
+  sha256 "57f160182bacdb16bb203d4ae21693f55b9392200bf21a1415ce4d5faa47d675"
   license "MIT"
 
   depends_on "node@22"
@@ -51,11 +51,12 @@ class Mocka < Formula
       Check status:
         mocka status
 
-      Admin UI:    http://localhost:3000
-      Mock Server: http://localhost:8080
+      Admin UI:    http://localhost:4649
+      Mock Server: http://localhost:4650
 
-      Custom ports:
-        ADMIN_PORT=4000 MOCK_PORT=9090 mocka start
+      Configure ports:
+        mocka config                                # View settings
+        mocka config admin_port=5000 mock_port=5001  # Change ports
 
       MCP (AI agent integration):
         mocka mcp install
