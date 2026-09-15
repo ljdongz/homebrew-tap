@@ -1,8 +1,8 @@
 class Mocka < Formula
   desc "AI-powered local mock server with MCP support"
   homepage "https://github.com/ljdongz/Mocka"
-  url "https://github.com/ljdongz/Mocka/archive/refs/tags/v3.2.0.tar.gz"
-  sha256 "8f6f70b8006f6c9f0dba5d039f843b2a2c013a938882917b7c3295035f446c24"
+  url "https://github.com/ljdongz/Mocka/archive/refs/tags/v3.2.1.tar.gz"
+  sha256 "7704ad934e6fd6babd61391d3311c8e91e31cf9179a6ee48db40f43c9944acef"
   license "MIT"
 
   depends_on "node@22"
@@ -68,5 +68,6 @@ class Mocka < Formula
 
   test do
     assert_match "Usage: mocka", shell_output("#{bin}/mocka help 2>&1", 1)
+    assert_match version.to_s, shell_output("#{bin}/mocka --version")
   end
 end
