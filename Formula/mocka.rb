@@ -1,8 +1,8 @@
 class Mocka < Formula
   desc "AI-powered local mock server with MCP support"
   homepage "https://github.com/ljdongz/Mocka"
-  url "https://github.com/ljdongz/Mocka/archive/refs/tags/v3.6.1.tar.gz"
-  sha256 "e0deb87350b5ea3e8ddb90c37413269cb2cc9270eafb411775b212b8478beb6d"
+  url "https://github.com/ljdongz/Mocka/archive/refs/tags/v3.7.0.tar.gz"
+  sha256 "750fd5c63278fe165cb11cc5ce5f9d7ea4a79d471d384c80f69b9c2d2a2edd47"
   license "MIT"
 
   depends_on "node@22"
@@ -48,8 +48,11 @@ class Mocka < Formula
       Stop Mocka:
         mocka stop
 
-      Check status:
+      Check status and addresses:
         mocka status
+
+      Open the Admin UI in your browser:
+        mocka dashboard
 
       Admin UI:    http://localhost:4649
       Mock Server: http://localhost:4650
