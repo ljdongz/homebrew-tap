@@ -1,8 +1,8 @@
 class Mocka < Formula
   desc "AI-powered local mock server with MCP support"
   homepage "https://github.com/ljdongz/Mocka"
-  url "https://github.com/ljdongz/Mocka/archive/refs/tags/v3.7.0.tar.gz"
-  sha256 "750fd5c63278fe165cb11cc5ce5f9d7ea4a79d471d384c80f69b9c2d2a2edd47"
+  url "https://github.com/ljdongz/Mocka/archive/refs/tags/v3.7.1.tar.gz"
+  sha256 "61d65297461e43eaf42f704edfdf0264c11b799da77559f7c5e0bebc46565395"
   license "MIT"
 
   depends_on "node@22"
